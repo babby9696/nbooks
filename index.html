@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+    <title> Napier Books </title>
+    <link rel="shortcut icon icon" href="favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/menu.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <script defer src="app/bluetooth.js"></script>
+    <script defer src="app/contact-picker.js"></script>
+    <script defer src="app/device-motion.js"></script>
+    <script defer src="app/file-system.js"></script>
+    <script defer src="app/idle-detection.js"></script>
+    <script defer src="app/sharing.js"></script>
+    <script defer src="app/idle-detection.js"></script>
+    <script defer src="app/sync.js"></script>
+
+</head>
+<body>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js');
+        }
+    </script>
+
+    <!--  //For picking up contacts to share app or feeds
+     <button id="contacts">Select Contacts</button>
+     <button id="contacts" class="btn btn-primary" onclick="app/contact-picker.js">Select Contacts</button>
+     <nav> -->
+    <!--
+    <h2>Bluetooth</h2>
+    <button id="ble" class="btn btn-primary">Connect Device</button>
+    <p id="motion"></p>
+    <h2>Contact Picker</h2>
+    <button id="contacts" class="btn btn-primary">Select Contacts</button>
+    <h2>Idle Detection</h2>
+    <button id="idle" class="btn btn-primary">Idle Detection</button>
+    <h2>File System</h2>
+    <button id="fs-get" class="btn btn-primary">Read File</button>
+    <button id="fs-save" class="btn btn-primary">Write File</button>
+    <h2>Web Share</h2>
+    <button id="share" class="btn btn-primary">Share on Twitter</button>
+        -->
+    
+
+    <div class="navbar">
+        <button id="ble" class="btn btn-primary">Connect Device</button>
+        <button id="contacts" class="btn btn-primary">Select Contacts</button>
+        <button id="idle" class="btn btn-primary">Idle Detection</button>
+        <button id="fs-get" class="btn btn-primary">Read File</button>
+        <button id="fs-save" class="btn btn-primary">Write File</button>
+        <button id="share" class="btn btn-primary">Share on Twitter</button>
+        <p id="motion"></p>
+    </div>
+
+
+  
+
+
+    <div class="container">
+        <div id="title" class="center">
+            <h1 id="header" class="text-center mt-5">Book Finder</h1>
+            <div class="row">
+                <div id="input" class="input-group mx-auto col-lg-6 col-md-8 col-sm-12">
+                    <input id="search-box" type="text" class="form-control" placeholder="Search Books!...">
+                    <button id="search" class="btn btn-primary" onclick="">Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="book-list">
+            <h2 class="text-center">Search Result</h2>
+            <div id="list-output" class="">
+                <div class="row">
+                    <!-- card  -->
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js');
+        }
+    </script>
+
+</body>
+</html>
